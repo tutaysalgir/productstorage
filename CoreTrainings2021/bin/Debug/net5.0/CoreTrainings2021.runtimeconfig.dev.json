@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\techMAYA\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\techMAYA\\.nuget\\packages"
+    ]
+  }
+}

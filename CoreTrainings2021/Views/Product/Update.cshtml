@@ -1,0 +1,9 @@
+﻿@model Product
+
+<form asp-action="update" asp-controller="product" method="post">
+    <input type="text" name="productname" placeholder="product name..." value="@Model.ProductName" required />
+    <br /><br />
+    <input type="text" name="price" placeholder="product price..." value="@Model.Price" required />
+    <br /><br />
+    <button class="btn btn-primary">Update</button>
+</form>

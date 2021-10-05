@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Product>
+
+<a asp-action="add" asp-controller="product" class="btn btn-success"> Add A New Product</a>
+
+<form asp-action="search" asp-controller="product" method="get" style="float:right">
+    <input type="text" name="q" placeholder="Search for products..." required />
+    <input type="submit" value="Search" class="btn btn-warning" />
+</form>
+
+<br /><br />
+
+<table class="table table-striped p-3">
+    <tr>
+        <th>Product Name</th>
+        <th>Price</th>
+        <th>Action</th>
+    </tr>
+    @{
+        foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.ProductName</td>
+            <td>@item.Price</td>
+            <td>
+                <a asp-action="update" asp-controller="product" asp-route-id="@item.ID" class="btn btn-primary">Update</a>
+                <a asp-action="delete" asp-controller="product" asp-route-id="@item.ID" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+        }
+    }
+</table>
